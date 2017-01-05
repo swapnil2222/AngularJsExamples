@@ -1,0 +1,14 @@
+<h1>List of Students</h1>
+<table>
+	<tr>
+		<th>Id</th>
+		<th>Name</th>
+		<th>City</th>
+	</tr>
+	<tr ng-repeat="students in msg track by $index">
+		<td>{{students.Id}}</td>
+		<td>{{students.name}}</td>
+		<td>{{students.city}}</td>
+	</tr>
+
+</table>

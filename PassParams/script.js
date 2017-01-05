@@ -1,5 +1,6 @@
 var myApp=angular.module("myModule",["ngRoute"])
  				 .config(function($routeProvider,$locationProvider){
+ 				 	$routeProvider.caseInsensitiveMatch=true;
  				 	$routeProvider
  				 	.when("/home",{
  				 		templateUrl:"templates/home.html",

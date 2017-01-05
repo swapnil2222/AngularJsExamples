@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html ng-app="myModule">
+<head>
+	<title>Controller As Syntax Example</title>
+	<script type="text/javascript" src="js/angular.min.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+</head>
+<body>
+<div ng-controller="countryController as country">
+	{{country.name}}
+</div><br>
+<div ng-controller="stateController as state">
+	{{state.name}}
+</div><br>
+<div ng-controller="cityController as city">
+	{{city.name}}
+</div><br>
+</body>
+</html>

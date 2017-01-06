@@ -1,0 +1,8 @@
+<h3>List of Students</h3>
+Name:<input type="text" ng-model="studCtrl.name" />
+<button ng-click="studCtrl.studentSearch()">Search</button>
+<ul>
+	<li ng-repeat="students in studCtrl.msg track by $index">
+	<a href="students/{{students.Id}}">	{{students.name}}</a>
+	</li>
+</ul>

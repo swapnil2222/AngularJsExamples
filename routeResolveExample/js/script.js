@@ -11,7 +11,16 @@ var myApp=angular.module("myModule",["ngRoute"])
                         })
                         .when("/students",{
                                 templateUrl:"templates/students.html",
-                                controller:"studentsController as studCtrl"
+                                controller:"studentsController as studCtrl",
+                                resolve:{
+                                  studentList:function($http){
+                                        return $http.post("php/display.php").success(function(data)
+                                    {
+                                        return data;
+                                    });        
+                                }
+                              }
+                                
                         })
                         .when("/students/:id",{
                                 templateUrl:"templates/studentDetail.html",
@@ -40,7 +49,7 @@ var myApp=angular.module("myModule",["ngRoute"])
                         $scope.courses=["C#","JAVA","PHP","AngularJS",".NET"];
                  })
                  //displays list of students
-                   .controller("studentsController",function($http,$scope,$log,$location)
+                   .controller("studentsController",function(studentList,$log,$location)
                   {
                     var vm=this;
                        
@@ -54,14 +63,8 @@ var myApp=angular.module("myModule",["ngRoute"])
                           $location.url("/studentSearch");
                       }
 
-                        function getData(){
-                        $http.post("php/display.php").success(function(data)
-                        {
-                                vm.msg=data;
-                        });     
-                        }
-                        getData();
-                        //leave this page code
+                              vm.msg=studentList;
+                                    //leave this page code
                         /*
                         $scope.$on("$routeChangeStart",function(event,next,current){
                             if(!confirm("Do you want to leave this page")){
@@ -92,7 +95,7 @@ var myApp=angular.module("myModule",["ngRoute"])
                         $scope.contactus_email="swaprenge2222@gmail.com";
                  })
                 .controller("studentDetailController",function($http,$scope,$routeParams){
-
++
                         function getDetail(){
                             $http({
                                 url:"php/studentDetail.php",

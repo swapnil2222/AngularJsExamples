@@ -1,0 +1,38 @@
+<html ng-app="myModule">
+	<head>
+		<script type="text/javascript" src="js/angular.min.js"></script>
+		<script type="text/javascript" src="js/angular-route.min.js"></script>
+		<script type="text/javascript" src="js/script.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<base href="/sampleAngular/routeReload/"> 
+	</head>
+	<body>
+	<table style="font-family: Arial">
+		<tr>
+			<td colspan="2" class="header">
+				<h1>My Website</h1>
+			</td>
+		</tr>
+
+		<tr>
+			<td  class="navMenu">
+				<a href="home">Home</a>
+				<a href="courses">Courses</a>
+				<a href="students">Our Students</a>
+				<a href="contactus">ContactUS</a>
+			</td>
+			<td class="mainContent">
+				<ng-view></ng-view>
+			</td>
+		
+		</tr>
+	
+		<tr>
+			<td colspan="2" class="footer">
+				<h3>Footer</h3>
+			</td>
+		</tr>
+
+	</table>
+	</body>
+</html>

@@ -1,0 +1,6 @@
+<h3>List of Students</h3>
+<ul>
+	<li ng-repeat="students in studCtrl.msg track by $index">
+	<a href="students/{{students.Id}}">	{{students.name}}</a>
+	</li>
+</ul>

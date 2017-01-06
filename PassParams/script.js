@@ -31,7 +31,7 @@ var myApp=angular.module("myModule",["ngRoute"])
  				 	$scope.message="HomePage"
  				 })
  				 .controller("coursesController",function($scope){
- 				 	$scope.courses=["C#","JAVA",".NET","PHP","MYSQL","ANDROID"];
+ 				 	$scope.courses=["C#","JAVA",".NET","PHP","MYSQL","ANDROID","YII"];
  				 })
  				 .controller("studentsController",function($scope,$http){
  				 		function getData(){

@@ -7,12 +7,15 @@ var App=angular.module("myModule",["ui.router"])
 						url:"/home",
 						templateUrl:"templates/home.html",
 						controller:"homeController as homeCtrl"
+						
 					})
 					.state("courses",{
 						url:"/courses",
 						templateUrl:"templates/courses.html",
 						controller:"coursesController as coursesCtrl"
+						
 					})
+
 					//displays list of students
 					.state("students",{
 						url:"/students",
@@ -45,6 +48,7 @@ var App=angular.module("myModule",["ui.router"])
 				.controller("homeController",function(){
 						var vm=this;
 						vm.message="HomePage";
+
 				})
 				//coursescontroller to show courses
 				.controller("coursesController",function(){

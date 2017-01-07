@@ -1,0 +1,38 @@
+<html ng-app="myModule">
+	<head>
+		<script type="text/javascript" src="js/angular.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.js"></script>
+		<script type="text/javascript" src="js/script.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<base href="/sampleAngular/uiRouteExample/"> 
+	</head>
+	<body>
+	<table style="font-family: Arial">
+		<tr>
+			<td colspan="2" class="header">
+				<h1>My Website</h1>
+			</td>
+		</tr>
+
+		<tr>
+			<td  class="navMenu">
+				<a ui-sref="home">Home</a>
+				<a ui-sref="courses">Courses</a>
+				<a ui-sref="students">Our Students</a>
+				<a ui-sref="contactus">ContactUS</a>
+			</td>
+			<td class="mainContent">
+				<ui-view></ui-view>
+			</td>
+		
+		</tr>
+	
+		<tr>
+			<td colspan="2" class="footer">
+				<h3>Footer</h3>
+			</td>
+		</tr>
+
+	</table>
+	</body>
+</html>
